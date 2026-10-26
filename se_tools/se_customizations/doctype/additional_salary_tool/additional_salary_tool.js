@@ -2,7 +2,7 @@
 // For license information, please see license.txt
 
 const METHOD_PREFIX =
-    "se_tools.se_tools.doctype.additional_salary_tool.additional_salary_tool";
+    "se_tools.se_customizations.doctype.additional_salary_tool.additional_salary_tool";
 
 // Browser-local autosave key — survives an offline reload / crash without needing the server.
 const LOCAL_KEY = "ast_local_draft";

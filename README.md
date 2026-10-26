@@ -32,4 +32,8 @@ Then restart the web and worker processes and open `/app/additional-salary-tool`
 - A recurring run shortens an overlapping recurring record's To Date, or cancels it if fully covered.
 - There is no dry-run. "Create Additional Salaries" submits after a confirm dialog.
 
+The module is "SE Customizations", shared with the site's other customizations. The tool also adds an
+"Additional Salary Tool" link under "Additional Salary" in the HRMS Payroll sidebar (re-applied after every
+migrate).
+
 Originally built on the Titansoft ERPNext server (Feeds app) and ported here.

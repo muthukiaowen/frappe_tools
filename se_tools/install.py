@@ -17,7 +17,19 @@ def after_install():
 
 
 def after_migrate():
+        remove_old_module_def()
         ensure_payroll_sidebar_link()
+
+
+def remove_old_module_def():
+        """The tool used to live in a module called "SE Tools"; it now lives in "SE Customizations"
+        with the rest of SE's customizations. Drop the old, now-empty Module Def so it doesn't linger."""
+        if not frappe.db.exists("Module Def", "SE Tools"):
+                return
+        if frappe.db.exists("DocType", {"module": "SE Tools"}):
+                return  # something still uses it; leave it alone
+        frappe.db.delete("Module Def", {"name": "SE Tools"})
+        frappe.db.commit()
 
 
 def ensure_payroll_sidebar_link():
