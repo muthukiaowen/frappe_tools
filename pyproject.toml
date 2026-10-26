@@ -1,0 +1,19 @@
+[build-system]
+requires = ["flit_core >=3.4,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "se_tools"
+authors = [
+    { name = "Owen Muthukia", email = "owenj611@gmail.com"}
+]
+description = "Custom tools for the Strategic Engagement ERPNext site (Additional Salary Tool)"
+requires-python = ">=3.10"
+readme = "README.md"
+dynamic = ["version"]
+dependencies = [
+    # "frappe~=15.0.0" # Installed and managed by bench.
+]
+
+[tool.bench.frappe-dependencies]
+# Frappe and HRMS are provided by the bench; nothing to pin here.
