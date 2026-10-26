@@ -7,3 +7,7 @@ app_license = "mit"
 
 # Needs HRMS for Additional Salary and Salary Structure Assignment.
 required_apps = ["hrms"]
+
+# Adds the Additional Salary Tool link under "Additional Salary" in the HRMS Payroll sidebar.
+after_install = "se_tools.install.after_install"
+after_migrate = ["se_tools.install.after_migrate"]
